@@ -41,5 +41,5 @@ def build_workout_sample():
 
 def build_exercise_sample():
     exercise1 = Exercise()
-    exercise1.name = 'squats'
+    exercise1.name = 'squats-kevein'
     return exercise1
