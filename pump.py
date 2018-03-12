@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask.json import JSONEncoder
+from flask_cors import CORS
 from workout import Workout
 from exercise import Exercise
 from execution import Execution
@@ -10,6 +11,7 @@ class CustomJSONEncoder(JSONEncoder):
         return obj.__dict__
 
 app = Flask(__name__)
+CORS(app)
 app.json_encoder = CustomJSONEncoder
 
 @app.route('/exercises')
